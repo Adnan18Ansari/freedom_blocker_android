@@ -32,7 +32,7 @@ version = 0.1
 
 # (list) Application requirements
 # comma separated e.g. requirements = sqlite3,kivy
-requirements = python3,kivy,pyjnius,android
+requirements = python3,kivy==2.3.0,pyjnius,android,pillow
 
 # (str) Custom source folders for requirements
 # Sets custom source for any requirements with recipes
@@ -60,6 +60,9 @@ services = BlockingService:service.py
 
 # (bool) Indicate if the application should be fullscreen or not
 fullscreen = 0
+
+# (bool) Accept SDK license
+android.accept_sdk_license = True
 
 # (list) Permissions
 android.permissions = FOREGROUND_SERVICE,PACKAGE_USAGE_STATS,SYSTEM_ALERT_WINDOW,RECEIVE_BOOT_COMPLETED,WAKE_LOCK,INTERNET
@@ -121,4 +124,3 @@ log_level = 2
 
 # (int) Display warning if buildozer is run as root (0 = False, 1 = True)
 warn_on_root = 1
-
